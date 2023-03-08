@@ -1,0 +1,35 @@
+package org.stepdefination;
+
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class fbLogin extends baseClassss {
+	public fbLogin() {
+
+		PageFactory.initElements(driver, this);
+
+	}
+
+	public WebElement getUserName() {
+		return userName;
+	}
+
+	public WebElement getPassWord() {
+		return passWord;
+	}
+
+	@FindBy(id = "email")
+	private WebElement userName;
+
+	@FindBy(id = "pass")
+	private WebElement passWord;
+
+	@FindBy(name="login")
+	private WebElement loginbtn;
+
+	public WebElement getLoginbtn() {
+		return loginbtn;
+	}
+}
